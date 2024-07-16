@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+}
+
+#game-container {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: url('1acf9f80504d4094e0fa4392291cbf1b.jpg') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    left: 10px;
+    bottom: 50%;
+    width: 20px;
+    height: 40px;
+    background: url('20240611_230318.png') no-repeat center;
+    background-size: contain;
+    background-color: transparent;
+}
+
+.enemy {
+    position: absolute;
+    top: 0;
+    right: -40px; /* Ajusta el espacio en el lado derecho para que los obstáculos sean más grandes */
+    width: 40px; /* Doble del ancho actual */
+    height: 80px; /* Doble de la altura actual */
+    background: url('20240611_225003.png') no-repeat center;
+    background-size: contain;
+    background-color: transparent;
+    animation: moveEnemy 3s linear infinite;
+}
+
+
+@keyframes moveEnemy {
+    from {
+        right: -20px;
+    }
+    to {
+        right: 520px; /* Ajustado para cubrir completamente el área de juego */
+    }
+}
